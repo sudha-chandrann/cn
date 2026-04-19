@@ -1,0 +1,20 @@
+enable
+configure terminal
+
+hostname MyRouter
+
+clock set 10:30:00 8 Apr 2026
+show clock
+
+line console 0
+password cisco
+login
+exit
+
+
+enable password class
+
+enable secret admin123
+
+
+write memory
