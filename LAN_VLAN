@@ -19,3 +19,31 @@ switchport access vlan 20
 exit
 
 end
+
+
+interface g0/1
+switchport mode trunk
+no shutdown
+exit
+
+
+///router cli
+
+enable
+configure terminal
+
+interface g0/0
+no shutdown
+exit
+
+
+interface g0/0.10
+encapsulation dot1Q 10
+ip address 192.168.1.254 255.255.255.0
+exit
+
+interface g0/0.20
+encapsulation dot1Q 20
+ip address 192.168.2.254 255.255.255.0
+exit
+
