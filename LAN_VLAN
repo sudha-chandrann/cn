@@ -1,0 +1,21 @@
+enable
+configure terminal
+
+vlan 10
+name VLAN10
+
+vlan 20
+name VLAN20
+exit
+
+interface range fa0/1 - 2
+switchport mode access
+switchport access vlan 10
+exit
+
+interface range fa0/3 - 4
+switchport mode access
+switchport access vlan 20
+exit
+
+end
